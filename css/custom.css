@@ -1,5 +1,5 @@
 /* ==========================================================================
-   infodoor.com.sg Premium Styling Customizations
+   infodoor.ca Premium Styling Customizations
    ========================================================================== */
 
 /* Load Premium Google Fonts */
@@ -67,7 +67,8 @@ header {
   border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
   position: sticky !important;
   top: 0 !important;
-  z-index: 9999 !important; /* Always the absolute topmost layer on the page */
+  z-index: 9999 !important;
+  /* Always the absolute topmost layer on the page */
 }
 
 /* Mobile Menu Stacking Guarantee */
