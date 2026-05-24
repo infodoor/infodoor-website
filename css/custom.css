@@ -1,0 +1,121 @@
+/* ==========================================================================
+   infodoor.com.sg Premium Styling Customizations
+   ========================================================================== */
+
+/* Load Premium Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* HSL Color System - Executive Corporate Demographics (Tech Royal Blue & Dark Navy) */
+  --primary-h: 215;
+  --primary-s: 85%;
+  --primary-l: 12%;
+  /* Elegant very dark navy */
+
+  --accent-h: 221;
+  --accent-s: 83%;
+  --accent-l: 53%;
+  /* High-tech vibrant blue (#2563eb) */
+
+  --primary-color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --accent-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #143056 !important;
+  /* Premium rich dark corporate navy blue */
+}
+
+body {
+  font-family: var(--font-body) !important;
+  color: #40516f !important;
+  /* Premium dark navy/slate blue body text */
+  background-color: #f8fafc !important;
+  line-height: 1.625;
+}
+
+/* Global utility overrides to ensure standard text colors use premium navy-blue tones */
+.text-slate-900,
+.text-slate-800,
+.text-slate-700,
+.text-slate-600 {
+  color: #40516f !important;
+}
+
+.text-slate-500 {
+  color: #3b4f74 !important;
+  /* Premium mid-tone blue-slate */
+}
+
+/* Glassmorphism Header Override */
+header {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important; /* Always the absolute topmost layer on the page */
+}
+
+/* Mobile Menu Stacking Guarantee */
+#navbarContent {
+  z-index: 9999 !important;
+}
+
+header button[data-toggle-target] {
+  z-index: 10000 !important;
+}
+
+/* Custom Buttons & Hover Micro-animations (Modern Royal Blue Gradient) */
+.btn-primary,
+a.bg-primary,
+button.bg-primary,
+.bg-primary {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.15), 0 2px 4px -1px rgba(37, 99, 235, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.btn-primary:hover,
+a.bg-primary:hover,
+button.bg-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25), 0 4px 6px -2px rgba(37, 99, 235, 0.15) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* Feature Grid Cards */
+.feature-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 12px !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: #2563eb !important;
+}
+
+/* Hero Section Customizations (Soft Ambient Blue Glow) */
+.hero-gradient {
+  background: radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.05) 0%, rgba(30, 64, 175, 0.01) 50%, transparent 100%), #ffffff !important;
+}
