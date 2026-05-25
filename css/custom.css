@@ -120,3 +120,245 @@ button.bg-primary:hover {
 .hero-gradient {
   background: radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.05) 0%, rgba(30, 64, 175, 0.01) 50%, transparent 100%), #ffffff !important;
 }
+
+/* ==========================================================================
+   Dark Mode System (GDPR & DMA Premium Compliant)
+   ========================================================================== */
+
+/* Dark Mode Color Palette overrides */
+.dark {
+  --primary-color: #0f172a; /* Slate 900 */
+  --accent-color: #3b82f6; /* Bright Blue */
+  background-color: #030712 !important; /* Slate 950 */
+}
+
+.dark body {
+  background-color: #030712 !important;
+  color: #94a3b8 !important; /* Slate 400 */
+}
+
+/* Base Headings in Dark Mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f8fafc !important; /* Slate 50 */
+}
+
+/* Background Overrides for Sections */
+.dark section.bg-white,
+.dark section.bg-slate-50,
+.dark section.bg-slate-50\/50,
+.dark section#portfolio,
+.dark section.cta-section {
+  background-color: #030712 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .hero-gradient,
+.dark section.hero-gradient {
+  background: radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.08) 0%, rgba(99, 102, 241, 0.02) 50%, transparent 100%), #030712 !important;
+}
+
+.dark section#portfolio {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glassmorphism Header in Dark Mode */
+.dark header {
+  background-color: rgba(3, 7, 18, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Mobile Menu Stacking in Dark Mode */
+.dark #navbarContent {
+  background-color: rgba(3, 7, 18, 0.98) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark header button[data-toggle-target] {
+  color: #f8fafc !important;
+}
+
+.dark header a.text-slate-700 {
+  color: #cbd5e1 !important; /* Slate 300 */
+}
+.dark header a.text-slate-700:hover {
+  color: #3b82f6 !important;
+}
+
+/* Feature Cards & Service Cards in Dark Mode */
+.dark .feature-card,
+.dark .bg-white.p-8.rounded-2x2,
+.dark .layouts\/_default\/list\.html article,
+.dark article.bg-white {
+  background: #0f172a !important; /* Slate 900 */
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .feature-card:hover,
+.dark .bg-white.p-8.rounded-2x2:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04) !important;
+}
+
+/* Text and Utility Overrides in Dark Mode */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark p.text-slate-600,
+.dark p {
+  color: #94a3b8 !important; /* Slate 400 */
+}
+
+.dark .text-slate-500 {
+  color: #64748b !important; /* Slate 500 */
+}
+
+.dark span.text-secondary {
+  color: #3b82f6 !important;
+}
+
+/* Ensure Dark-Background Images Are Visible and Pop (Highlight glow + crisp border) */
+.dark .rounded-2x2.overflow-hidden.shadow-2xl,
+.dark .rounded-2x2.overflow-hidden.shadow-xl,
+.dark .max-w-md.aspect-\[16\/10\].rounded-2x2,
+.dark .w-full.max-w-lg.aspect-video.rounded-2x2 {
+  background: #020617 !important; /* Deepest background */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Elegant light edge separator */
+  box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.25), 0 20px 40px -15px rgba(0, 0, 0, 0.8) !important; /* High-end violet ambient glow + deep shadows */
+}
+
+.dark .rounded-2x2.overflow-hidden.shadow-2xl:hover,
+.dark .rounded-2x2.overflow-hidden.shadow-xl:hover,
+.dark .w-full.max-w-lg.aspect-video.rounded-2x2:hover {
+  box-shadow: 0 0 60px -2px rgba(99, 102, 241, 0.35), 0 25px 45px -15px rgba(0, 0, 0, 0.9) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Partner Logo Inversion for dark mode blending */
+.dark img[src*="logo2"] {
+  filter: invert(0.8) brightness(1.5) contrast(1.2) !important;
+}
+
+/* CTA and Testimonial Customizations */
+.dark section.py-20.bg-slate-900 {
+  background-color: #020617 !important; /* Deepest blue-slate */
+}
+
+.dark .bg-slate-800\/50 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.dark .bg-slate-800\/30 {
+  background-color: rgba(15, 23, 42, 0.3) !important;
+}
+
+/* Custom list items text fix */
+.dark .layouts\/_default\/list\.html a.text-slate-900 {
+  color: #f8fafc !important;
+}
+
+/* Footer Customizations in Dark Mode */
+.dark footer {
+  background-color: #030712 !important; /* Blends perfectly with rest of the dark site background */
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark footer span.text-primary,
+.dark footer span {
+  color: #f8fafc !important; /* Bright white for the InfoDOOR logo title */
+}
+
+.dark footer h2.text-primary,
+.dark footer h2 {
+  color: #f8fafc !important; /* Bright white for the heading sections */
+}
+
+.dark footer a,
+.dark footer p,
+.dark footer li,
+.dark footer span:not(.text-primary) {
+  color: #94a3b8 !important; /* Legible, premium slate-gray/light gray */
+}
+
+.dark footer a:hover {
+  color: #3b82f6 !important; /* Interactive light blue highlight */
+}
+
+/* Outline Buttons in Dark Mode */
+.dark a.border-primary.text-primary {
+  border-color: rgba(255, 255, 255, 0.2) !important; /* Elegant light outline */
+  color: #cbd5e1 !important; /* Legible, clean light gray text */
+  background-color: transparent !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dark a.border-primary.text-primary:hover {
+  border-color: #3b82f6 !important; /* Premium high-tech blue outline glow */
+  background-color: rgba(59, 130, 246, 0.08) !important; /* Soft ambient blue background fill */
+  color: #ffffff !important; /* Brilliant white text on hover */
+  transform: translateY(-1px) !important;
+}
+
+/* Ensure any internal SVG arrows in the outline button are also styled properly */
+.dark a.border-primary.text-primary svg {
+  color: inherit !important;
+  stroke: currentColor !important;
+}
+
+/* Dark Mode Article and Markdown Prose Legibility (GDPR/DMA compliant) */
+.dark .content,
+.dark .prose,
+.dark .prose p,
+.dark p.text-slate-600 {
+  color: #cbd5e1 !important; /* Slate 300 - very legible light grey */
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose strong,
+.dark .content strong,
+.dark strong {
+  color: #f8fafc !important; /* Bright white for headings and bold texts */
+}
+
+/* Links inside prose content (including the email links on the contact page) */
+.dark .content a,
+.dark .prose a {
+  color: #3b82f6 !important; /* Vibrant high-tech blue for links */
+  text-decoration-color: rgba(59, 130, 246, 0.4) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .content a:hover,
+.dark .prose a:hover {
+  color: #60a5fa !important; /* Lighter bright blue on hover */
+  text-decoration-color: #60a5fa !important;
+}
+
+/* List items and table of contents inside articles */
+.dark .content li,
+.dark .prose li {
+  color: #cbd5e1 !important;
+}
+
+.dark .content li::marker,
+.dark .prose li::marker {
+  color: #3b82f6 !important; /* Vibrant blue list markers */
+}
+
+/* Horizontal Rules in dark mode articles */
+.dark .prose hr,
+.dark .content hr {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
