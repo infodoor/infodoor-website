@@ -59,11 +59,9 @@ body {
   /* Premium mid-tone blue-slate */
 }
 
-/* Glassmorphism Header Override */
+/* Sticky Header Override */
 header {
-  background-color: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
+  background-color: rgba(255, 255, 255, 0.98) !important; /* Premium near-solid background to prevent stacking context clipping */
   border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
   position: sticky !important;
   top: 0 !important;
@@ -167,11 +165,9 @@ button.bg-primary:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Glassmorphism Header in Dark Mode */
+/* Sticky Header in Dark Mode */
 .dark header {
-  background-color: rgba(3, 7, 18, 0.8) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
+  background-color: rgba(3, 7, 18, 0.98) !important; /* Premium near-solid background to prevent stacking context clipping */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -361,4 +357,67 @@ button.bg-primary:hover {
 .dark .prose hr,
 .dark .content hr {
   border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Bulletproof Responsive Mobile/Desktop Navigation Stacking & Visibility */
+@media (max-width: 1279px) {
+  #navbarContent {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+
+  #navbarContent.-translate-y-full {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Premium smooth fade-out and rotation transition for sandwich button */
+  #mobile-menu-trigger {
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Hide and spin sandwich button when mobile menu is open */
+  header:has(#navbarContent:not(.-translate-y-full)) #mobile-menu-trigger {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    transform: scale(0.8) rotate(90deg) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #navbarContent {
+    position: relative !important;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    inset: auto !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem !important;
+    z-index: auto !important;
+  }
+
+  /* Forcefully hide and disable mobile-only layouts on desktop viewports */
+  #mobile-menu-trigger,
+  #mobile-header-top,
+  #navbarContent > div.absolute,
+  #navbarContent > .absolute,
+  button[data-toggle-target="#navbarContent"] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
 }
